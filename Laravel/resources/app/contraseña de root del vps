@@ -1,0 +1,19 @@
+contraseña de root del vps
+vqRh0T44yPfZL6J0n8
+
+comando para correr
+flatpak run org.openscad.OpenSCAD
+
+usuario del hostin:
+theclub3d
+
+clave del hosting:
+Axolote2553d
+
+para conectar por ssh:
+
+ssh root@66.29.139.151 -p22
+
+
+para mysql el suario root y la clave es Axolote2553d
+

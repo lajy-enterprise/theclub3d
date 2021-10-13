@@ -1,0 +1,68 @@
+.container{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-family: "Bebas Neue"
+ 
+}
+
+.boton {
+    background: #EFEFEF;
+    color:#EE5D09;
+    padding: 4px 25px 6px 25px;
+    margin-left: 100px;
+    margin-right: 0;
+    border-radius: 50px;
+    border: 4px solid #fdc134;
+    font-family: "Bebas Neue"
+    
+}
+
+.boton :hover {
+  background: #fdc134;
+  color: #EFEFEF;
+}
+
+
+
+section{
+  background-color: #cfcece;
+}
+
+.contact{
+  margin-right: 170px;
+  font-family: "Bebas Neue"
+}
+
+
+.form-control{
+  background-color: #EE5D09;
+  font-family: "Bebas Neue"
+}
+
+.form-group .col-md-4{
+  display: inline;
+  align-content: center ;
+
+}
+
+.titulo {
+  color: #EE5D09;
+  font-family: "Bebas Neue"
+}
+
+.info{
+  color: #EE5D09 ;
+  font-family: "Bebas Neue"
+}
+
+.centrar{
+    display: flex ;
+    margin-left: 270px ;
+    
+}
+.bloque{
+    display: block ;
+    background: #B9DDF2 ;
+   padding-top: 10px ;
+   padding-bottom: 15px ; 
+}

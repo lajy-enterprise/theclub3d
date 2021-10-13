@@ -1,0 +1,274 @@
+datos de las herramientas:
+
+1110 = /////////variables a modificar 
+name = "SOFIA "; // CAPITAL 
+height= 15; // min 15
+long= 50; // min 30 
+thicknessb= 7 ;
+/////////////
+
+1111 = //////////////////////////////////////
+name = "Alejandro"; 
+height= 23;
+long= 75 ; 
+thicknessb= 7;
+thicknessn= 2 ;
+use<C:/Users/lo36p/Desktop/The club3D/1/diver codes/fuentes/Gothica-Bold.ttf>
+
+font = "Gothica-Bold";
+////////////////////////////////////
+
+
+1112 = /////////////
+name = "OSIEL C"; // CAPITAL 
+height=20; 
+long= 45; 
+thicknessb= 6;
+use<C:/Users/lo36p/Desktop/The club3D/1/diver codes/fuentes/AbrilFatface-Regular.ttf>
+font = "AbrilFatface-Regular";
+///////////////////////////
+
+
+1113 = /////////////////////
+name = "JUAN EDU"; // CAPITAL 
+height= 20; 
+long= 56 ; 
+thicknessb= 5 ;
+thicknessn= 2 ;
+
+use<C:/Users/lo36p/Desktop/The club3D/1/diver codes/fuentes/Pacifico-Regular.ttf>
+font = "Pacifico-Regular";
+////////////
+
+1114 = ///////////////////
+name = "Michelle"; 
+height= 21; 
+long= 63; 
+thicknessb= 4 ;
+thicknessn= 10 ;
+use<C:/Users/lo36p/Desktop/The club3D/1/diver codes/fuentes/Caveat-VariableFont_wght.ttf>
+font = "Caveat-VariableFont_wght";
+//////////////////////
+
+1115= ///////////
+name = "Alan Garcia";  
+height= 25; 
+long= 65; 
+thicknessb= 8 ;
+thicknessn= 1 ;
+use<C:/Users/lo36p/Desktop/The club3D/1/diver codes/fuentes/Kalam-Regular.ttf>
+font = "Kalam-Regular";
+/////////////
+
+1116 = /////////////////////
+name = "Gerard and Sara";  
+height= 24; 
+long= 78; 
+thicknessb= 12 ;
+use<C:/Users/lo36p/Desktop/The club3D/1/diver codes/fuentes/CoveredByYourGrace-Regular.ttf>
+font = "CoveredByYourGrace-Regular";
+///////////////
+
+1117 = /////////////////////////
+name = "Alex"; // primera capital
+height= 20;
+long= 50 ; 
+thicknessb= 3 ;
+thicknessn= 5 ;
+//use<C:/Users/lo36p/Desktop/The club3D/1/diver codes/fuentes/NothingYouCouldDo-Regular.ttf>
+//font = "NothingYouCouldDo-Regular";
+////////////////////////
+
+1118 = /////////////////////////
+name = "Zac"; // primera capital
+height= 10; 
+long= 30;
+thicknessb= 6 ;
+thicknessn= 2 ;
+////////////////////////
+
+1119 = /////////variables a modificar 
+name = "Iram"; // primera capital
+height= 30; 
+long= 85 ; 
+thicknessb= 5 ;
+thicknessn= 3 ;
+/////////////
+
+1120v2 = //////////////////
+name = "Max";
+text1 = "1010101010";
+height= 28; 
+long=45; 
+thicknessb=3;
+thicknessn= 4;
+
+use<C:/Users/lo36p/Desktop/The club3D/1/diver codes/fuentes/Pacifico-Regular.ttf>
+font = "Pacifico-Regular";
+///////////////////
+
+1121 = //////////////////
+name = "Hilary";
+text1 = "1010101010";
+height= 30; 
+long=45; 
+thicknessb= 3;
+thicknessn= 3;
+
+use<C:/Users/lo36p/Desktop/The club3D/1/diver codes/fuentes/Pacifico-Regular.ttf>
+font = "Pacifico-Regular";
+///////////////////
+
+1122v2 = /////////////////////////////////
+name = "TOBY"; // mayuscula 
+height= 26; 
+long= 40; 
+thicknessb= 7;
+/////////////////////////////
+
+1123 = /////////////////////////////////
+name = "Scott";
+text2 ="1010101010";
+height= 45; 
+long= 45; 
+thicknessb=5;
+
+use<C:/Users/lo36p/Desktop/The club3D/1/diver codes/fuentes/DancingScript-VariableFont_wght.ttf>
+font = "DancingScript-VariableFont_wght";
+/////////////////////////////
+
+
+1124 = ////////////
+x= 90;
+z = 60;
+hoyo_agua = 6; // diametro
+/////////////
+hoyos = 6; // diametro
+dist_pared =5;
+
+/////////////
+
+
+1125 = ////////////
+x= 90;
+z = 50;
+dist_pared =7;
+hoyo_agua = 4; // diametro
+/////////////
+hoyos = 3; // diametro
+////////////
+
+1126 = ////////////////////////////////
+sc = "s1.svg";
+thicknessb= 2 ;
+thicknessc= 2 ;
+///////////////////////////////
+height= 20; 
+long= 70 ;
+/////////////
+
+1127 = /////////////////
+sc = "s2.svg"; 
+thicknessb= 6 ;
+//////////////////
+height= 20; 
+long= 70;
+///////////////
+
+1129v2 = ///////////
+sc = "s3.svg";
+////////
+
+
+1130 = //////////////////
+k = "66.svg";
+x =80;
+y =80;
+z =17;
+////////////////
+
+
+1131 = //////////////////
+k = "4.svg";
+x =55;
+y =70;
+z =15;
+split = 6;
+base = 3 ;
+////////////////
+
+
+1132 = ////////////////////
+text1 ="GAMER ZONE";
+height= 30; 
+long= 140;
+thicknessb= 7 ;
+use<C:/Users/lo36p/Desktop/The club3D/1/diver codes/fuentes/FredokaOne-Regular.ttf>
+font = "FredokaOne-Regular";
+/////////////////////
+
+
+1134 = //////////////////
+text1 = "MOM"; //mayus
+height= 40;
+long= 100;
+thicknessb= 60;
+use<C:/Users/lo36p/Desktop/The club3D/1/diver codes/fuentes/AbrilFatface-Regular.ttf>
+font = "AbrilFatface-Regular";
+//////////////////
+
+
+1135 = ///////////////////////
+text1= "Feliz dia";
+height= 17; 
+long= 70; 
+thicknessb= 5 ;//mayor a 3 
+use<C:/Users/lo36p/Desktop/The club3D/1/diver codes/fuentes/Minecraftia.ttf>
+font = "Minecraftia";
+/////////////////////
+
+1136 = /////////////
+text1= "love";// palabra
+height= 100; 
+long= 250; 
+thickness= 15 ;
+dist_pared =5;
+dist_base = 3;
+///////////
+use <C:/Users/lo36p/Desktop/The club3D/programs/fuentes/DancingScript-VariableFont_wght.ttf>
+
+1137 = /////////////
+letter= "G";// letra
+height= 80; 
+long= 80 ;  
+thickness= 40 ;
+dist_p =6;
+dist_b = 7;
+
+use<C:/Users/lo36p/Desktop/The club3D/1/diver codes/fuentes/Gothica-Bold.ttf>
+font = "Gothica-Bold";
+///////////
+
+1138 = ///////////
+letter= "P"; // MAYUscula
+height= 50;
+long= 55 ; 
+thicknessb= 50 ;
+dis_p =5 ;
+hoyos = 3; // diametro
+hoyo_agua = 5; // diametro
+use<C:/Users/lo36p/Desktop/The club3D/1/diver codes/fuentes/New Telegraph.ttf>
+font = "New Telegraph";
+//////////////////
+
+
+1140 = ///////////////////////////
+text1= "Shady";
+thicknessn=7;
+dist= 48;
+//////////////////////////
+use<C:/Users/lo36p/Desktop/The club3D/1/diver codes/fuentes/Minecraftia.ttf>
+font = "Minecraftia";
+
+//////////////
+

@@ -1,0 +1,10 @@
+.bg-image {
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  height: 200px;
+  width: auto;
+  box-sizing: content-box;
+}
