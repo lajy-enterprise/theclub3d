@@ -54,7 +54,7 @@ Route::group(
     Route::resource('category', 'CategoryController');
     Route::resource('post', 'PostController');
 
-    Route::resource('herramienta', 'HerramientaController');
+    Route::resource('tool', 'ToolController');
 
     //Route::resource('subscriber', 'SubscriberController')->only(['index', 'destroy']);
     //Route::resource('comments', 'CommentController')->only(['index', 'destroy']);

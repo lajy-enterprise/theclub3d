@@ -91,10 +91,10 @@
             </a>
           </li>
 
-          <li class="{{Request::is('admin/post*') ? 'active' : ''}}">
-            <a href="{{route('admin.herramienta.index')}}">
+          <li class="{{Request::is('admin/tool*') ? 'active' : ''}}">
+            <a href="{{route('admin.tool.index')}}">
               <i class="material-icons">library_books</i>
-              <span>Herramientas</span>
+              <span>tools</span>
             </a>
           </li>
 

@@ -14,6 +14,14 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
+
+use MartinButt\Laravel\Adsense\Facades\AdsenseFacade;
+
+use Adsense;
+
 
 class HerramientaController extends Controller
 {
@@ -28,8 +36,7 @@ class HerramientaController extends Controller
     }
 
     $herras = Post::where('is_post', false)
-      ->latest()
-      ->paginate(6);
+      ->paginate(16);
 
     return view('herra', compact('herras'));
   }

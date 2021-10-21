@@ -6,6 +6,10 @@ use App\Subscriber;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 
+use MartinButt\Laravel\Adsense\Facades\AdsenseFacade;
+
+use Adsense;
+
 class SubscriberController extends Controller
 {
     /**

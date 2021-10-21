@@ -14,6 +14,14 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 
+
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
+use MartinButt\Laravel\Adsense\Facades\AdsenseFacade;
+
+use Adsense;
+
 class PostController extends Controller
 {
   use AuthenticatesUsers;
@@ -30,7 +38,7 @@ class PostController extends Controller
       ->where('status', true)
       ->where('is_post', true)
       ->latest()
-      ->paginate(6);
+      ->paginate(16);
 
     $herras = Post::where('is_post', false)
       ->latest()
@@ -72,12 +80,60 @@ class PostController extends Controller
       $random_posts = "nada";
     }
     
-    
-    /* $blog_key = "blog_{$post->id}";
+    $blog_key = "blog_{$post->id}";
     if (!Session::has($blog_key)) {
       $post->increment('view_count');
       Session::put($blog_key, 1);
-    } */
+    }
+
+    $dia_actual = Carbon::now()->format('d-m-Y');
+    $semana_ano = Carbon::now()->weekOfYear;
+    $filename= 'semana_'.$semana_ano.'.json';
+    $path = storage_path() . '/app/estadisticas/posts/';
+
+    if(Storage::disk('local')->exists('/estadisticas/posts/'.$filename)){
+      $json = File::get($path.$filename);
+      $archivo = json_decode($json, true);
+      $key = array_search($dia_actual, array_column($archivo, "date"));
+      if ($key !== false) {
+        $buscar = $archivo[$key]["tools"];
+        if (empty($archivo[$key]["tools"][$slug])) {
+          $archivo[$key]["tools"] += [ $slug => 1 ];
+        }else{
+          foreach ($buscar as $clave => $valor) {
+            if ($clave === $slug) {
+              $archivo[$key]["tools"][$clave]=$valor+1;
+            }
+          }
+        }
+        $jsito = json_encode($archivo);
+        $fp = fopen($path.$filename, "w");
+        fwrite($fp, $jsito);
+        fclose($fp);
+      }else{
+        $arraicito= array(
+          "date" => $dia_actual,
+          "tools" => array($slug => 1) 
+        );
+
+        array_push($archivo, $arraicito);
+
+        $jsito = json_encode($archivo);
+        $fp = fopen($path.$filename, "w");
+        fwrite($fp, $jsito);
+        fclose($fp);
+      }
+    }else{
+      $arraicito= array(
+        array(
+        "date" => $dia_actual,
+        "tools" => array($slug => 1) 
+        )
+      );
+
+      $jsiton = json_encode($arraicito);
+      Storage::put('/estadisticas/posts/'.$filename, $jsiton);
+    }
 
     /* $comments =  $post->comments; */
 

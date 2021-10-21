@@ -10,6 +10,10 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 
+use MartinButt\Laravel\Adsense\Facades\AdsenseFacade;
+
+use Adsense;
+
 class LandingController extends Controller
 {
 

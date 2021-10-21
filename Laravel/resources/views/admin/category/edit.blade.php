@@ -44,15 +44,6 @@
                 </div>
               </div>
 
-              <div class="form-group">
-                <input
-                  type="file"
-                  id="category_image"
-                  class="form-control"
-                  name="category_image"
-                >
-              </div>
-
               <a
                 href="{{route('admin.category.index')}}"
                 class="btn btn-danger m-t-15 m-r-10 waves-effect"

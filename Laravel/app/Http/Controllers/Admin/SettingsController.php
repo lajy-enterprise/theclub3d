@@ -21,16 +21,10 @@ class SettingsController extends Controller
     {
         $request->validate([
 
-            "pais"       => 'required',
-            "estado"     => 'required',
-            "ciudad"     => 'required',
-            "direccion"  => 'required',
-            "telefono"   => 'required',
-            "edad"       => 'required',
             'name' => 'required',
             'username' => 'required',
             'email' => 'required|email|unique:users,email,'.Auth::id(),
-            'image' => 'mimes:jpg,jpeg,png'
+            //'image' => 'mimes:jpg,jpeg,png'
         ]);
 
         $user = User::findOrFail(Auth::id());
@@ -40,14 +34,7 @@ class SettingsController extends Controller
         $name_user = $request->name;
 
         $username = $request->username;
-        $user_pais = $request->pais;
-        $user_estado = $request->estado;
-        $user_ciudad = $request->ciudad;
-        $user_direccion = $request->direccion;
-        $user_telefono = $request->telefono;
-        $user_edad = $request->edad;
-        $show_name = $request->show_name;
-
+        
         if (isset($image)) {
             $storeProfileImage = new StoreImage(
                 'profile', $image, 500, 500, $name_user, $user->image
@@ -61,15 +48,7 @@ class SettingsController extends Controller
         $user->about = $request->about;
 
         $user->username = $username;
-        $user->pais = $user_pais;
-        $user->estado = $user_estado;
-        $user->ciudad = $user_ciudad;
-        $user->direccion = $user_direccion;
-        $user->telefono = $user_telefono;
-        $user->edad = $user_edad;
-
-        $user->show_name = isset($show_name);
-
+        
         $user->save();
 
         Toastr::success('Profile Updated Successfully', 'Profile Updated');

@@ -12,9 +12,9 @@
 @section('content')
   <div class="container-fluid">
     <div class="block-header">
-      <a href="{{route('admin.herramienta.create')}}" class="btn btn-primary waves-effect">
+      <a href="{{route('admin.tool.create')}}" class="btn btn-primary waves-effect">
         <i class="material-icons">add</i>
-        <span>Add New Herramienta</span>
+        <span>Add New tool</span>
       </a>
     </div>
 
@@ -65,14 +65,14 @@
 
                       <td class="text-center">
                         {{-- <a
-                          href="{{route('admin.herramienta.show', $post->id)}}"
+                          href="{{route('admin.tool.show', $post->id)}}"
                           class="btn btn-success waves-effect m-r-10"
                         >
                           <i class="material-icons">visibility</i>
                         </a> --}}
 
                         <a
-                          href="{{route('admin.herramienta.edit', $post->id)}}"
+                          href="{{route('admin.tool.edit', $post->id)}}"
                           class="btn btn-info waves-effect m-r-10"
                         >
                           <i class="material-icons">edit</i>
@@ -87,7 +87,7 @@
 
                         <form
                           id="delete-post-form-{{$post->id}}"
-                          action="{{route('admin.herramienta.destroy', $post->id)}}"
+                          action="{{route('admin.tool.destroy', $post->id)}}"
                           method="POST"
                           class="d-none"
                         >

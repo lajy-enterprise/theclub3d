@@ -115,6 +115,14 @@
 
                     @endif
 
+                    @if($tag->tipo == 'file')
+
+                      <label class="mb-0 pb-0"> {{$tag->name}} - {{$tag->descripcion}}: </label>
+
+                      <input type="file" name="{{$tag->name}}" id="{{$tag->name}}" required>
+
+                    @endif
+
                   @endforeach 
                   
                 </div>

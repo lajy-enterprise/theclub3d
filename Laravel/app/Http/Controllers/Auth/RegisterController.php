@@ -25,7 +25,11 @@ class RegisterController extends Controller
     |
     */
 
+    //use Validator;
+
     use RegistersUsers;
+
+    //use AuthenticatesUsers;
 
     /**
      * Where to redirect users after registration.
@@ -41,13 +45,13 @@ class RegisterController extends Controller
      */
     public function __construct()
     {   
-      if (Auth::check() && Auth::user()->role->id === 1) {
-        return redirect()->route('admin.dashboard');
+      if (Auth::check() && (!empty(Auth::user()->role->role) == 1)){
+        $this->redirectTo=route('admin.dashboard');
       } else {
-        return redirect()->route('home.index');
+        $this->redirectTo=route('home.index');
       }
       $this->middleware('guest');
-    }
+    } 
 
     /**
      * Get a validator for an incoming registration request.

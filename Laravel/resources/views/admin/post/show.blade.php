@@ -67,22 +67,6 @@
 
           </div>
         </div>
-
-        <div class="card">
-          <div class="header bg-green">
-            <h2>
-              TAGS
-            </h2>
-
-          </div>
-          <div class="body">
-            @foreach ($post->tags as $tag)
-              <span class="label bg-green">{{$tag->name}}</span>
-            @endforeach
-
-          </div>
-        </div>
-
         <div class="card">
           <div class="header bg-amber">
             <h2>
@@ -93,46 +77,9 @@
           <div class="body">
 
             <div class="row">
-                    
-              <div class="col-12 col-sm-12 col-md-12 d-flex justify-content-center align-items-center">
-                <div id="carouselDetails" class="carousel slide p-3" data-ride="carousel">
-
-                  @php ($imagenes = $post->image)
-                  @php ($imageArray = explode(" | ", $imagenes))
-                  @php ($count = count($imageArray))
-                  
-                  <ol class="carousel-indicators">
-                    @for ($i = 0; $i < $count; $i++)
-                      @if($i == 0)
-                        <li data-target="#carouselDetails" data-slide-to="{{$i}}" class="active"></li>
-                      @else
-                        <li data-target="#carouselDetails" data-slide-to="{{$i}}"></li>
-                      @endif
-                    @endfor
-                  </ol>
-                  <div class="carousel-inner">
-                    @for ($i = 0; $i < $count; $i++)
-                      @if($i == 0)
-                        <div class="carousel-item active">
-                          <img src="{{asset('storage/post/')}}/{{$imageArray[$i]}}" alt="{{$post->slug}}" class="carrouselligas img-fluid">
-                        </div>
-                      @else
-                        <div class="carousel-item">
-                          <img src="{{asset('storage/post/')}}/{{$imageArray[$i]}}" alt="{{$post->slug}}" class="carrouselligas img-fluid">
-                        </div>
-                      @endif
-                    @endfor
-                  </div>
-                  <a class="carousel-control-prev" href="#carouselDetails" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselDetails" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                
-                </div>
+              
+              <div class="col-md-8 col-md-offset-2">
+                <img src="{{asset('storage/post/')}}/{{$post->image}}" alt="{{$post->slug}}" class="img-responsive">
               </div>
           
             </div>

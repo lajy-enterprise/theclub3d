@@ -52,7 +52,7 @@
 
                           <div class="row clearfix">
                             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                              <label for="username">Nombre de Usuario</label>
+                              <label for="username">Username</label>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                               <div class="form-group">
@@ -88,23 +88,6 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
-
-                          <div class="row my-4 d-flex flex-row text-center justify-content-center">
-                              
-                            <div class="my-4">
-                              <input
-                                type="checkbox"
-                                id="show_name"
-                                name="show_name"
-                                class="filled-in"
-                                value="1"
-                                {{Auth::user()->show_name ? 'checked' : ''}}
-                              >
-                              <label for="show_name">Mostrar nombre en lugar de Usuario</label>
-                              
-                            </div>
-                              
                           </div>
 
                           <div class="row clearfix mt-3">
@@ -159,126 +142,6 @@
                                   >
                                     {{Auth::user()->about}}
                                   </textarea>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="row clearfix">
-                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                              <label for="pais">Pais</label>
-                            </div>
-                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                              <div class="form-group">
-                                <div class="form-line">
-                                  <input
-                                    type="text"
-                                    id="pais"
-                                    name="pais"
-                                    class="form-control"
-                                    placeholder="Enter your pais"
-                                    value="{{Auth::user()->pais}}"
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="row clearfix">
-                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                              <label for="estado">Estado</label>
-                            </div>
-                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                              <div class="form-group">
-                                <div class="form-line">
-                                  <input
-                                    type="text"
-                                    id="estado"
-                                    name="estado"
-                                    class="form-control"
-                                    placeholder="Enter your estado"
-                                    value="{{Auth::user()->estado}}"
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="row clearfix">
-                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                              <label for="ciudad">Ciudad</label>
-                            </div>
-                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                              <div class="form-group">
-                                <div class="form-line">
-                                  <input
-                                    type="text"
-                                    id="ciudad"
-                                    name="ciudad"
-                                    class="form-control"
-                                    placeholder="Enter your ciudad"
-                                    value="{{Auth::user()->ciudad}}"
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="row clearfix">
-                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                              <label for="direccion">Direccion</label>
-                            </div>
-                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                              <div class="form-group">
-                                <div class="form-line">
-                                  <input
-                                    type="text"
-                                    id="direccion"
-                                    name="direccion"
-                                    class="form-control"
-                                    placeholder="Enter your direccion"
-                                    value="{{Auth::user()->direccion}}"
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="row clearfix">
-                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                              <label for="telefono">Telefono</label>
-                            </div>
-                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                              <div class="form-group">
-                                <div class="form-line">
-                                  <input
-                                    type="number"
-                                    id="telefono"
-                                    name="telefono"
-                                    class="form-control"
-                                    placeholder="Enter your telefono"
-                                    value="{{Auth::user()->telefono}}"
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="row clearfix">
-                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                              <label for="edad">Edad</label>
-                            </div>
-                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                              <div class="form-group">
-                                <div class="form-line">
-                                  <input
-                                    type="number"
-                                    id="edad"
-                                    name="edad"
-                                    class="form-control"
-                                    placeholder="Enter your edad"
-                                    value="{{Auth::user()->edad}}"
-                                  >
                                 </div>
                               </div>
                             </div>

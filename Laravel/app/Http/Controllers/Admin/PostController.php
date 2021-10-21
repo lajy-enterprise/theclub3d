@@ -59,13 +59,7 @@ class PostController extends Controller
         $image1 = $request->file('post_image1');
         
         $post_title = $request->post_title;
-        $post_pais = $request->post_pais;
-        $post_estado = $request->post_estado;
-        $post_ciudad = $request->post_ciudad;
-        $post_direccion = $request->post_direccion;
-        $post_telefono = $request->post_telefono;
-        $post_edad = $request->post_edad;
-
+        
         $slug = str_slug($post_title);
 
 
@@ -146,7 +140,6 @@ class PostController extends Controller
         $request->validate([
             "post_title" => 'required',
             "categories" => 'required',
-            "tags"       => 'required',
             "post_body"  => 'required',
             ]);
 
@@ -155,24 +148,13 @@ class PostController extends Controller
         $image1 = $request->file('post_image1');
         
         $post_title = $request->post_title;
-        $post_pais = $request->post_pais;
-        $post_estado = $request->post_estado;
-        $post_ciudad = $request->post_ciudad;
-        $post_direccion = $request->post_direccion;
-        $post_telefono = $request->post_telefono;
-        $post_edad = $request->post_edad;
-
+      
         $slug = str_slug($post_title);
 
         /* las usamos */
 
         $post->title = $post_title;
-        $post->pais = $post_pais;
-        $post->estado = $post_estado;
-        $post->ciudad = $post_ciudad;
-        $post->direccion = $post_direccion;
-        $post->telefono = $post_telefono;
-        $post->edad = $post_edad;
+        
 
         $post->slug = $slug;
         $post->user_id = Auth::id();

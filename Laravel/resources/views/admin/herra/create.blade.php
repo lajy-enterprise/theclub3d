@@ -19,7 +19,7 @@
   @endif
   <div class="container-fluid">
     <form
-      action="{{route('admin.herramienta.store')}}"
+      action="{{route('admin.tool.store')}}"
       method="POST"
       enctype="multipart/form-data"
     >
@@ -30,7 +30,7 @@
           <div class="card">
             <div class="header">
               <h2>
-                ADD NEW POST
+                ADD NEW TOOL
               </h2>
 
               @if ($errors->any())
@@ -60,6 +60,7 @@
                   id="post_scad"
                   class="form-control"
                   name="post_scad"
+                  onchange="return fileValidationScad()"
                 >
                 <label class="form-label">Archivo scad</label>
               </div>
@@ -70,6 +71,7 @@
                   id="post_image"
                   class="form-control"
                   name="post_image"
+                  onchange="return fileValidationImg()"
                 >
                 <label class="form-label">Imagen</label>
               </div>
@@ -81,7 +83,7 @@
           <div class="card">
             <div class="header">
               <h2>
-                TAGS the Herramientas
+                TAGS the Tools
               </h2>
 
             </div>
@@ -105,7 +107,7 @@
               </div>
 
               <a
-                href="{{route('admin.herramienta.index')}}"
+                href="{{route('admin.tool.index')}}"
                 class="btn btn-danger m-t-15 m-r-10 waves-effect"
               >
                 BACK
@@ -166,6 +168,31 @@
           tinymce.suffix = ".min";
           tinyMCE.baseURL = '{{asset('assets/backend/plugins/tinymce')}}';
       });
+
+  </script>
+  <script>
+    
+    function fileValidationScad(){
+    var fileInput = document.getElementById('post_scad');
+    var filePath = fileInput.value;
+    var allowedExtensions = /(.scad)$/i;
+      if(!allowedExtensions.exec(filePath)){
+        alert('Upload a file that has the correct extensions .scad');
+        fileInput.value = '';
+        return false;
+      }
+    }
+
+    function fileValidationImg(){
+    var fileInput = document.getElementById('post_image');
+    var filePath = fileInput.value;
+    var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+      if(!allowedExtensions.exec(filePath)){
+        alert('Upload a file that has the correct extensions .jpg, .jpeg, .png, .gif');
+        fileInput.value = '';
+        return false;
+      }
+    }
 
   </script>
 @endpush

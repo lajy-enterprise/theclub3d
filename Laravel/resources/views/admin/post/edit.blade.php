@@ -86,7 +86,7 @@
           <div class="card">
             <div class="header">
               <h2>
-                CATEGORIES AND TAGS
+                CATEGORIES
               </h2>
 
             </div>
@@ -114,27 +114,6 @@
                   </select>
                 </div>
 
-                <div class="form-line {{$errors->has('tags') ? 'focused error' : ''}}">
-                  <label for="tags">Select Tag</label>
-                  <select
-                    class="form-control show-tick"
-                    name="tags[]"
-                    id="tags"
-                    {{--                    data-live-search="true"--}}
-                    multiple
-                  >
-                    @foreach ($tags as $tag)
-                      <option
-                        value="{{$tag->id}}"
-                        @foreach ($post->tags as $post_tag)
-                            {{$post_tag->id == $tag->id ? 'selected' : ''}}
-                        @endforeach
-                      >
-                        {{$tag->name}}
-                      </option>
-                    @endforeach
-                  </select>
-                </div>
               </div>
 
               <a
@@ -152,101 +131,6 @@
         </div>
       </div>
       <!-- Vertical Layout | With Floating Label -->
-
-      
-        
-      <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
-        <div class="card">
-          <div class="header">
-            <h2>
-              Datos de la Liga
-            </h2>
-
-            @if ($errors->any())
-                @foreach ($errors->all() as $error)
-                    <div class="alert alert-danger">
-                      {{$error}}
-                    </div>
-                @endforeach
-            @endif
-
-          </div>
-          
-          <div class="body">
-            <div class="form-group form-float">
-              <div class="form-line">
-                <label for="post_pais">Pais</label>
-                <input
-                  type="text"
-                  id="post_pais"
-                  class="form-control"
-                  name="post_pais"
-                  value="{{$post->pais}}"
-                >
-              </div>
-
-              <div class="form-line">
-                <label for="post_estado">Estado</label>
-                <input
-                  type="text"
-                  id="post_estado"
-                  class="form-control"
-                  name="post_estado"
-                  value="{{$post->estado}}"
-                >
-              </div>
-
-              <div class="form-line">
-                <label for="post_ciudad">Ciudad</label>
-                <input
-                  type="text"
-                  id="post_ciudad"
-                  class="form-control"
-                  name="post_ciudad"
-                  value="{{$post->ciudad}}"
-                >
-              </div>
-
-              <div class="form-line">
-                <label for="post_direccion">Direccion</label>
-                <input
-                  type="text"
-                  id="post_direccion"
-                  class="form-control"
-                  name="post_direccion"
-                  value="{{$post->direccion}}"
-                >
-              </div>
-
-              <div class="form-line">
-                <label for="post_telefono">Telefono</label>
-                <input
-                  type="number"
-                  id="post_telefono"
-                  class="form-control"
-                  name="post_telefono"
-                  value="{{$post->telefono}}"
-                >
-              </div>
-
-              <div class="form-line">
-                <label for="post_edad">Edad</label>
-                <input
-                  type="number"
-                  id="post_edad"
-                  class="form-control"
-                  name="post_edad"
-                  value="{{$post->edad}}"
-                >
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-
 
       <!-- Vertical Layout | With Floating Label -->
       <div class="row clearfix">

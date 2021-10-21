@@ -22,7 +22,7 @@
             <p class="info">Data with an asterisk (*) are required </p>
         </div>
 
-      
+       
           <form method="POST" action="{{ route('register') }}">
             @csrf
               <div class="row">
@@ -100,7 +100,7 @@
                   <label class="form-check-label" for="inlineRadio3">Other</label>
                 </div>
 
-                @error('username')
+                @error('gender')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -112,7 +112,7 @@
 
       
               <div class="form-group col-md-11 me-md-auto text-center align-items-center" >
-                  <input class="boton" type="submit" name="submit" value="Sign in">
+                  <input class="boton" type="submit" name="submit" value="Sing In">
               </div>
       
           </form>

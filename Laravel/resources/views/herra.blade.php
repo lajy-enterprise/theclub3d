@@ -28,10 +28,10 @@
 
       <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
       @foreach ($herras as $herra)
-        <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-          <div>
+        <div class="col-lg-3 col-md-6 portfolio-item filter-app my-0 py-0">
+          <div class="my-0 py-0">
             
-            <figure class="">
+            <figure class="my-0 py-0">
 
               <img src="{{asset('storage/herramientas')}}/{{$herra->image}}" class="img-fluid" alt="{{$herra->slug}}">
               <a href="{{route('herra.details', $herra->slug)}}" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
@@ -41,7 +41,14 @@
         </div>
       @endforeach
       </div>
+
+      <div class="row text-center d-flex align-items-center justify-content-center">
+        {{$herras->links()}}  
+      </div>
+      
+
     </div>
+
   </section>
 
 

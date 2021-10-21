@@ -27,8 +27,17 @@
 
     <!-- Template Main CSS File -->
     <link href="{{asset('assets/frontend/css/style.css')}}" rel="stylesheet">
+
+    {{-- Adsense javascript --}}
+
+    {!! Adsense::javascript() !!}
+
+    {{-- /----------------- --}}
   
     @stack('css')
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5555331109415462"
+     crossorigin="anonymous"></script>
 
 </head>
 <body class="bg-fondo">
@@ -45,11 +54,15 @@
     
     {{-- ------------------------- --}}
 
-
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
     
     <!-- Vendor JS Files -->
     <script src="{{asset('assets/frontend/vendor/aos/aos.js')}}"></script>
-    <script src="{{asset('assets/frontend/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('assets/frontend/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('assets/frontend/vendor/glightbox/js/glightbox.min.js')}}"></script>
     <script src="{{asset('assets/frontend/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
     <script src="{{asset('assets/frontend/vendor/php-email-form/validate.js')}}"></script>
@@ -59,6 +72,7 @@
     <script src="{{asset('assets/frontend/js/main.js')}}"></script>
 
 
+    
 
     {{-- ------------------- --}}
 

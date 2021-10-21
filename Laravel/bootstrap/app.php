@@ -41,6 +41,8 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+$app->singleton(MartinButt\Laravel\Adsense\Providers\AdsenseServiceProvider::class);
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application

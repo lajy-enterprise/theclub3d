@@ -45,11 +45,9 @@ class CategoryController extends Controller
         $request->validate(
             [
                 'category_name' => 'required|unique:categories,name',
-                'category_image' => 'mimes:jpg,jpeg,png,svg'
             ]
         );
 
-        $image = $request->file('category_image');
         $category_name = $request->category_name;
         $slug = str_slug($category_name);
 
